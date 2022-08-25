@@ -133,15 +133,21 @@ public class LoginTest {
         signin.getSignInBtn().click();
 
         Assert.assertTrue(account.successfullyCreatedAccount().isDisplayed());
+        //driver.close();
     }
 
     @Test(priority = 6)
     public void listPopular() {
+
+      /*  String baseUrl = "http://automationpractice.com/index.php?controller=authentication";
+        driver.manage().window().maximize();
+        driver.get(baseUrl);
+
         signin.setEmailField("testautomationmfs@gmail.com");
         signin.setPasswordField("TestAutomation@123");
         signin.getSignInBtn().click();
 
-
+*/
         //Click Home Button
         clothes.getHomeButton().click();
 
@@ -184,12 +190,12 @@ public class LoginTest {
 
     @Test(priority = 7)
     public void AddToCart() throws Exception {
-        signin.setEmailField("testautomationmfs@gmail.com");
+    /*    signin.setEmailField("testautomationmfs@gmail.com");
         signin.setPasswordField("TestAutomation@123");
         signin.getSignInBtn().click();
 
         Assert.assertTrue(account.successfullyCreatedAccount().isDisplayed());
-
+*/
         //scroll Page Up
         Actions actuP = new Actions(driver);
         actuP.sendKeys(Keys.PAGE_UP).build().perform(); //Page Down
